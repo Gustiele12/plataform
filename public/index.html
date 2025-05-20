@@ -1,0 +1,36 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebRTC Video Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Being, Between</h1>
+      <div class="room-info">
+        <input type="text" id="room-input" placeholder="Enter room ID">
+        <button id="join-btn">Join Room</button>
+      </div>
+    </div>
+    
+    <div class="video-container" id="video-container">
+      <div class="video-item">
+        <video id="local-video" autoplay muted></video>
+        <div class="user-label">You</div>
+      </div>
+      <!-- Remote videos will be added here dynamically -->
+    </div>
+    
+    <div class="controls">
+      <button id="leave-btn">Leave Room</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
